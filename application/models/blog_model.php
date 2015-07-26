@@ -11,9 +11,9 @@ class Blog_model extends CI_Model{
 	
    function insert_entry()
     {
-        $this->title   = time(); //
+        $this->title   = rand(1000, 9999); //
         $this->content = 'bbb';
-        $this->date    = 'cc';
+        $this->date    = time();
 
         $this->db->insert('blog', $this);
         
